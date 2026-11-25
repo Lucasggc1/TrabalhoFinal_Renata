@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+h1 {
+    color: #1f2a44;
+}
+
+h2 {
+    color: #0077b6;
+}
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 30px;
+    background-color: #1f2a44;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration-line: none;
+}
+
+.menu ul {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    text-decoration-line: none;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    background-color: #3a4a70;
+}
+
+.menu .ativo {
+    background-color: #0077b6;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.caixa {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+}
+
+.apresentacao {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+    animation-name: entrada;
+    animation-duration: 1s;
+}
+
+figure {
+    margin: 0;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: auto;
+    border: 5px solid #0077b6;
+    border-radius: 50%;
+}
+
+.apresentacao h1 {
+    margin-top: 0;
+    font-size: 2.2rem;
+    text-shadow: 2px 2px 4px #bbbbbb;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.estagio {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ffd166;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.botao {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #0077b6;
+    color: white;
+    text-decoration-line: none;
+}
+
+.botao:hover {
+    background-color: #1f2a44;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    padding: 10px;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    text-align: left;
+    vertical-align: middle;
+}
+
+thead th {
+    background-color: #1f2a44;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e6f2fa;
+}
+
+#lista-habilidades {
+    list-style-type: square;
+}
+
+#lista-habilidades li {
+    margin: 8px 0;
+}
+
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.projeto {
+    position: relative;
+    margin-bottom: 0;
+    animation-name: subir;
+    animation-duration: 1s;
+}
+
+.projeto:hover {
+    border-color: #0077b6;
+}
+
+.feito-com {
+    color: #666666;
+    font-size: 0.9rem;
+}
+
+.rodape {
+    padding: 20px;
+    background-color: #1f2a44;
+    color: white;
+    text-align: center;
+}
+
+.rodape a {
+    color: #ffd166;
+}
+
+@keyframes entrada {
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes subir {
+    0% {
+        top: 50px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    .caixa {
+        padding: 15px;
+    }
+
+    .apresentacao {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .foto-perfil {
+        width: 150px;
+    }
+
+    .links {
+        justify-content: center;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    th, td {
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+}
